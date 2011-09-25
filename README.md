@@ -1,5 +1,7 @@
 I was inspired to write this as part of an automated hft system after reading [this article](http://veyronb.wordpress.com/2011/07/31/bootstrapping-an-ultra-low-latency-trading-firm-part-1).  The rest of the components for that never came about, but this turned out to be a worth while investment of time. Maybe at some point I'll create a trading bot for [TF2TP](http://tf2tp.com/) (if thats acceptible use) and then an automated source sdk system.  It would be interesting to create the system to collect market information.  This could be used to create a sort of stock ticker site to give incite into the Mannconomy.  I'm not sure how useful it would be, but its an interesting thought experiment.
 
+I cannot g that I have full coverage across all items.  I only can test against those that I have.  My backpack contents are [here](http://www.tf2items.com/id/ciferkey).
+
 #Resources
 [Here](http://steamcommunity.com/dev) is steam's main page on their web api. [This page](http://developer.valvesoftware.com/wiki/Steam_Web_API) however is actually usefull. The teamfortress.com [wiki](http://wiki.teamfortress.com/wiki/WebAPI) has more info on the implentation.
 

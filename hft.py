@@ -74,7 +74,7 @@ chunk = rows[start:]
 m = header.match(chunk[0][0])
 items[m.group('class')] = chunk_to_items(chunk)
 
-#Spelling hotfixes
+#Spelling hotfixes, because the spreadsheet and schema use different names
 hotfixes = [
     ('SCOUT', "Fan O'War", "Fan O' War"),
     ('SCOUT', 'Force-a-Nature', 'Force-A-Nature'),
@@ -93,12 +93,12 @@ for hotfix in hotfixes:
     items[hotfix[0]][hotfix[1]] = items[hotfix[0]].pop(hotfix[2])
 
 API_KEY = raw_input('Steam Api Key : ')
-ciferkey = raw_input('Login Name (NOT alias)/Steam ID : ')
-ciferkey = unicode(ciferkey)
+username = raw_input('Login Name (NOT alias)/Steam ID : ')
+username = unicode(username)
 
-if ciferkey.isnumeric()==False:
-    xml = urllib2.urlopen("http://steamcommunity.com/id/"+ciferkey+"?xml=1").read()
-    ciferkey = re.search("<steamID64>(\d+)</steamID64>", xml).group(1)
+if username.isnumeric()==False:
+    xml = urllib2.urlopen("http://steamcommunity.com/id/"+username+"?xml=1").read()
+    username = re.search("<steamID64>(\d+)</steamID64>", xml).group(1)
 
 def get_items(key, userid):
     url = ''.join([
@@ -145,7 +145,7 @@ def parse_backpack(result):
             
     print "total = ", total
 
-result = get_items(API_KEY, ciferkey)
+result = get_items(API_KEY, username)
 schema = get_schema(API_KEY)
 parse_backpack(result)
 
