@@ -62,12 +62,14 @@ for end, row in enumerate(rows):
         m = header.match(chunk[0][0])
         items[m.group('class')] = chunk_to_items(chunk)
         start = end + 1
-
 chunk = rows[start:]
 m = header.match(chunk[0][0])
 items[m.group('class')] = chunk_to_items(chunk)
+print items['SPY']
 
 #Spelling hotfixes
+#items['SOLDIER']['Frying Pan'] = 
+items['SPY']['Your Eternal Reward'] = 
 items['DEMOMAN']['Loch-n-Load'] = items['DEMOMAN'].pop('Loch-N-Load')
 items['DEMOMAN']['Claidheamohmor'] = items['DEMOMAN'].pop('Claidheamh Mor')
 items['PYRO']['Upgradeable TF_WEAPON_FLAMETHROWER'] = items['PYRO'].pop('Flamethrower')
