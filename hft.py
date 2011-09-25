@@ -69,7 +69,7 @@ print items['SPY']
 
 #Spelling hotfixes
 #items['SOLDIER']['Frying Pan'] = 
-items['SPY']['Your Eternal Reward'] = 
+#items['SPY']['Your Eternal Reward'] = 
 items['DEMOMAN']['Loch-n-Load'] = items['DEMOMAN'].pop('Loch-N-Load')
 items['DEMOMAN']['Claidheamohmor'] = items['DEMOMAN'].pop('Claidheamh Mor')
 items['PYRO']['Upgradeable TF_WEAPON_FLAMETHROWER'] = items['PYRO'].pop('Flamethrower')
