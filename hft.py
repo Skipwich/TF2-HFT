@@ -124,7 +124,7 @@ def parse_backpack(result):
     _items = result['result']['items']
     
     mapping = {6: 'u', 3: 'v', 11: 's'}
-    total = 0.0
+    low_sum, high_sum = 0.0, 0.0
     
     for item in _items:
         match = search_item(item['defindex'], schema)
@@ -139,11 +139,12 @@ def parse_backpack(result):
             low, high = items[used][name][mapping[item['quality']]]
             print name, mapping[item['quality']], low, high
             
-            total += low
+            high_sum += high
+            low_sum += low if low == 0.0 else high
         else:
             print "mismatch...", name, used
             
-    print "total = ", total
+    print "Between ", low_sum, " to ", high_sum, " scrap."
 
 result = get_items(API_KEY, username)
 schema = get_schema(API_KEY)
