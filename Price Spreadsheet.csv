@@ -1,8 +1,8 @@
-Team Fortress 2,Made by: TheUltimateLaxBro
+Team Fortress 2,Made by: TheUltimateLaxBro,KEY
 Weapons Price Guide,What's here and what's not (scroll over),What's the Difference between Item Types? (Scroll Over),What is our goal with this project?
 Weapon Name,Unique,Vintage,Strange
 SCOUT Slot 1
-Scattergun,---,---,1.66 Rf
+Scattergun,---,---,1-1.33 Rf
 Force-A-Nature*,0.5-1 S,1.5-2 S,---
 Shortstop,0.5-1 S,---,---
 Soda Popper,1 S,---,---
@@ -16,7 +16,7 @@ Winger,1-1.5 S,---,---
 
 SCOUT Slot 3
 Bat,---,---,---
-Sandman*,1-1.5 S,1.5-2 S,1.33 Rc
+Sandman*,1-1.5 S,1.5-2 S,1 Rc
 Holy Mackerel,1 S,---,---
 Candy Cane,1 S,---,---
 Boston Basher,1 S,---,0.66-1 Rc
@@ -26,9 +26,9 @@ Three-Rune Blade***,0.66-1 Rf,---,---
 Atomizer,1 S,---,---
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~,~~~~~~~~~~~~~~~,~~~~~~~~~~~~~~~,~~~~~~~~~~~~~~~
 SOLDIER Slot 1
-Rocket Launcher,---,---,1.66-2 Rf
+Rocket Launcher,---,---,2.33-3 Rf
 Direct Hit*,1 S,1.5-2 S,1.33-2 Rc
-Black Box,1 S,---,---
+Black Box,1 S,---,2 Rf
 Rocket Jumper,1 Rf,---,---
 Liberty Launcher,1 S,---,---
 Cow Mangler 5000,1-2 S,---,---
@@ -47,7 +47,7 @@ Righteous Bison***,1-2 S,---,---
 SOLDIER Slot 3
 Shovel,---,---,---
 Equalizer*,1 S,1-1.5 S,---
-Pain Train,1 S,1-2 S,0.66-1 Rc
+Pain Train,1 S,1-2 S,0.66 Rc
 Half-Zatoichi***,1-2 S,2-3 Rf,---
 Disciplinary Action,1-2 S,---,---
 Market Gardener,1 S,---,---
@@ -59,34 +59,34 @@ Degreaser,1-1.5 S,---,---
 
 PYRO Slot 2
 Shotgun,---,---,1 Rf
-Flare Gun*,1 S,1.5-2 S,.66-1 Rf
+Flare Gun*,1 S,1.5-2 S,1-2 Rc
 Detonator,1 S,---,---
 
 PYRO Slot 3
 Fire Axe,---,---,---
-Axtinguisher*,1 S,2 S,---
+Axtinguisher*,1 S,2 S,1.66 Rf
 Homewrecker,1 S,2 S,---
-Powerjack,1 S,---,0.66-1 Rf
+Powerjack,1 S,---,1-1.33 Rc
 Back Scratcher,1 S,---,---
 Sharpened Volcano Fragment***,1-2 S,2-2.33 Rf,---
 Maul***,2-3 Rf,---,---
 Postal Pummeler,1-1.5 S,---,---
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 DEMOMAN Slot 1
-Grenade Launcher,---,---,1.33-1.66 Rf
+Grenade Launcher,---,---,1.66-2 Rf
 Loch-N-Load,1 S,0.66-1.66 Rf,---
 Ali Baba's Wee Booties,1-2 S,---,---
 
 DEMOMAN Slot 2
 Stickybomb Launcher,---,---,1.33-2 Rf
-Chargin' Targe*,1 S,1-1.5 S,1 Rc
+Chargin' Targe*,1 S,1-1.5 S,2 S
 Scottish Resistance*,1 S,2 S,---
 Sticky Jumper,1 Rf,---,---
 Splendid Screen,1 S,---,---
 
 DEMOMAN Slot 3
 Bottle,---,---,---
-Eyelander*,1 S,1-2 S,0.66-1 Rf
+Eyelander*,1 S,1-2 S,0.33-1 Rc
 Pain Train,1 S,1-2 S,0.66-1 Rc
 Scotsman's Skullcutter,1 S,2 S,---
 Horseless Headless Horsemann's Headtaker,3-4 Rf,---,---
@@ -98,7 +98,7 @@ Nessie's Nine Iron,1 S,---,---
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 HEAVY Slot 1
 Minigun,---,---,2 Rf
-Natascha*,1 S,2 S,1.33-2 Rc
+Natascha*,1 S,2 S,1.33 Rc
 Brass Beast,1 S,1-2 Rc,---
 Tomislav,1-2 S,---,---
 
@@ -112,14 +112,14 @@ Family Business,1 S,---,---
 HEAVY Slot 3
 Fists,---,---,---
 Killing Gloves of Boxing*,1 S,1.5-2 S,---
-Gloves of Running Urgently,1 S,---,1-2 Rc
+Gloves of Running Urgently,1 S,---,0.66-1 Rc
 Warrior's Spirit,1 S,2 Rc,---
 Fists of Steel,1 S,---,---
 Eviction Notice,1 S,---,---
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ENGINEER Slot 1
 Shotgun,---,---,1 Rf
-Frontier Justice*,1 S,1.5-2 S,1-1.33 Rf**
+Frontier Justice*,1 S,1.5-2 S,0.66-1 Rf**
 Widowmaker***,1-2 Rc**,---,---
 
 ENGINEER Slot 2
@@ -131,37 +131,37 @@ ENGINEER Slot 3
 Wrench,---,---,0.66-1 Rf**
 Gunslinger,1 S,1-2 S,---
 Southern Hospitality,1 S,2 S,---
-Jag,1 S,---,1-1.33 Rf**
+Jag,1 S,---,0.66-1 Rf**
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 MEDIC Slot 1
-Syringe Gun,---,---,1-1.66 Rf**
+Syringe Gun,---,---,1-2 Rc**
 Blutsauger*,1 S,2 S,---
-Crusader's Crossbow,1 S,0.66-1.33 Rf,1.66-2 Rf**
+Crusader's Crossbow,1 S,0.66-1.33 Rf,1-2 Rc**
 Overdose,1 S,---,---
 
 MEDIC Slot 2
-Medi Gun,---,---,3-4 Rf**
+Medi Gun,---,---,1.66-2 Rf**
 Kritzkrieg*,1 S,2 S,---
 Quick-Fix,1.5-2 S,---,---
 
 MEDIC Slot 3
-Bonesaw,---,---,0.66-1 Rf**
+Bonesaw,---,---,1 Rc**
 Ubersaw*,1 S,2 S,---
 Vita-Saw,1 S,---,---
 Amputator,1 S,1-3 Rf,---
 Solemn Vow,1-2 S,---,---
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 SNIPER Slot 1
-Sniper Rifle,---,---,2-2.33 Rf**
+Sniper Rifle,---,---,1.66 Rf**
 Huntsman*,1 S,2 S,---
-Sydney Sleeper,1 S,---,1-2 Rf**
+Sydney Sleeper,1 S,---,0.66-1 Rf**
 Bazaar Bargain,1-1.5 S,---,---
 Machina***,1-1.66 Rc**,---,---
 
 SNIPER Slot 2
 Submachine Gun,---,---,---
-Jarate*,1 S,1.5-2 S,1-1.33 Rc**
-Razorback*,1 S,2 S,---
+Jarate*,1 S,1.5-2 S,0.66-1 Rf**
+Razorback*,1 S,2 S,0.66-1 Rf
 Darwin's Danger Shield,1 S,---,---
 
 SNIPER Slot 3
@@ -184,23 +184,10 @@ Cloak and Dagger*,1 S,1.5-2 S,---
 Dead Ringer*,1 S,1.5-2 S,---
 
 SPY Slot 3
-Knife,---,---,1.33-1.66 Rf
+Knife,---,---,0.66-1 Rf
 Your Eternal Reward,1 S,---,---
 Conniver's Kunai***,1 S,1.66-3 Rf,1-2 Rc
 Big Earner,1 S,---,---
-
-KEY:
-S = Scrap Metal
-Rc = Reclaimed Metal
-Rf = Refined Metal
-BOLD: Weapons in High Demand
-* = A weapon with more vintage than unique 
-"** = Newly introduced, subject to change"
-*** = Weapons that have a genuine version 
-Metal Conversion:
-2 Weapons = 1 Scrap 
-3 Scrap = 1 Reclaimed = 6 weapons
-3 Reclaimed = 1 Refined = 18 weapons
 
 BIG THANKS TO THESE PEOPLE:
 bbq1029
