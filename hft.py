@@ -3,12 +3,7 @@ import re
 import urllib2
 import json
 import string
-
-reader = csv.reader(open('Price Spreadsheet.csv', 'rU'))
-rows = [row for row in reader if row][3:-6]
-classes = ['SCOUT', 'SOLDIER', 'PYRO', 'DEMOMAN', 'HEAVY', 'ENGINEER', 'MEDIC',
-    'SNIPER', 'SPY' 
-]
+import cPickle
 
 def chunk_to_items(chunk):
     def convert_metal(metal): 
@@ -59,38 +54,52 @@ def chunk_to_items(chunk):
             
     return items
 
-header = re.compile('(?P<class>\w+) Slot (?P<slot>\d)')
+try:
+    items_pickle = open('items.pk', 'r')
+    items = cPickle.load(items_pickle)
+    items_pickle.close()
+except IOError:
+    reader = csv.reader(open('Price Spreadsheet.csv', 'rU'))
+    rows = [row for row in reader if row][3:-6]
+    classes = ['SCOUT', 'SOLDIER', 'PYRO', 'DEMOMAN', 'HEAVY', 'ENGINEER', 'MEDIC',
+        'SNIPER', 'SPY' 
+    ]
+    header = re.compile('(?P<class>\w+) Slot (?P<slot>\d)')
 
-items = {}
-start = 0
+    items = {}
+    start = 0
 
-for end, row in enumerate(rows):
-    if '~' in row[0]:
-        chunk = rows[start:end]
-        m = header.match(chunk[0][0])
-        items[m.group('class')] = chunk_to_items(chunk)
-        start = end + 1
-chunk = rows[start:]
-m = header.match(chunk[0][0])
-items[m.group('class')] = chunk_to_items(chunk)
+    for end, row in enumerate(rows):
+        if '~' in row[0]:
+            chunk = rows[start:end]
+            m = header.match(chunk[0][0])
+            items[m.group('class')] = chunk_to_items(chunk)
+            start = end + 1
+    chunk = rows[start:]
+    m = header.match(chunk[0][0])
+    items[m.group('class')] = chunk_to_items(chunk)
 
-#Spelling hotfixes, because the spreadsheet and schema use different names
-hotfixes = [
-    ('SCOUT', "Fan O'War", "Fan O' War"),
-    ('SCOUT', 'Force-a-Nature', 'Force-A-Nature'),
-    ('SOLDIER', 'Upgradeable TF_WEAPON_SHOTGUN_PRIMARY', 'Shotgun'),
-    ('PYRO', 'Upgradeable TF_WEAPON_FLAMETHROWER', 'Flamethrower'),
-    ('DEMOMAN', 'Loch-n-Load', 'Loch-N-Load'),
-    ('DEMOMAN', 'Claidheamohmor', 'Claidheamh Mor'),
-    ('ENGINEER', 'Upgradeable TF_WEAPON_WRENCH', 'Wrench'),
-    ('MEDIC', 'Upgradeable TF_WEAPON_BONESAW', 'Bonesaw'),
-    ('MEDIC', 'Upgradeable TF_WEAPON_SYRINGEGUN_MEDIC', 'Syringe Gun'),
-    ('MEDIC', 'Upgradeable TF_WEAPON_MEDIGUN', 'Medi Gun'),
-    ('SNIPER', 'Upgradeable TF_WEAPON_SNIPERRIFLE', 'Sniper Rifle'),
-]
+    #Spelling hotfixes, because the spreadsheet and schema use different names
+    hotfixes = [
+        ('SCOUT', "Fan O'War", "Fan O' War"),
+        ('SCOUT', 'Force-a-Nature', 'Force-A-Nature'),
+        ('SOLDIER', 'Upgradeable TF_WEAPON_SHOTGUN_PRIMARY', 'Shotgun'),
+        ('PYRO', 'Upgradeable TF_WEAPON_FLAMETHROWER', 'Flamethrower'),
+        ('DEMOMAN', 'Loch-n-Load', 'Loch-N-Load'),
+        ('DEMOMAN', 'Claidheamohmor', 'Claidheamh Mor'),
+        ('ENGINEER', 'Upgradeable TF_WEAPON_WRENCH', 'Wrench'),
+        ('MEDIC', 'Upgradeable TF_WEAPON_BONESAW', 'Bonesaw'),
+        ('MEDIC', 'Upgradeable TF_WEAPON_SYRINGEGUN_MEDIC', 'Syringe Gun'),
+        ('MEDIC', 'Upgradeable TF_WEAPON_MEDIGUN', 'Medi Gun'),
+        ('SNIPER', 'Upgradeable TF_WEAPON_SNIPERRIFLE', 'Sniper Rifle'),
+    ]
 
-for hotfix in hotfixes:
-    items[hotfix[0]][hotfix[1]] = items[hotfix[0]].pop(hotfix[2])
+    for hotfix in hotfixes:
+        items[hotfix[0]][hotfix[1]] = items[hotfix[0]].pop(hotfix[2])
+
+    items_pickle = open('items.pk', 'w')
+    cPickle.dump(items, items_pickle)
+    items_pickle.close()
 
 API_KEY = raw_input('Steam Api Key : ')
 username = raw_input('Login Name (NOT alias)/Steam ID : ')
@@ -147,6 +156,16 @@ def parse_backpack(result):
     print "Between ", low_sum, " to ", high_sum, " scrap."
 
 result = get_items(API_KEY, username)
-schema = get_schema(API_KEY)
+
+try:
+    schema_pickle = open('schema.pk', 'r')
+    schema = cPickle.load(schema_pickle)
+    schema_pickle.close()
+except IOError:
+    schema = get_schema(API_KEY)
+    schema_pickle = open('schema.pk', 'w')
+    cPickle.dump(schema, schema_pickle)
+    schema_pickle.close()
+
 parse_backpack(result)
 
