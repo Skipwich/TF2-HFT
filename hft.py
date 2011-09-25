@@ -5,7 +5,7 @@ import json
 import string
 
 reader = csv.reader(open('Price Spreadsheet.csv', 'rU'))
-rows = [row for row in reader if row][3:-18]
+rows = [row for row in reader if row][3:-6]
 classes = ['SCOUT', 'SOLDIER', 'PYRO', 'DEMOMAN', 'HEAVY', 'ENGINEER', 'MEDIC',
     'SNIPER', 'SPY' 
 ]
@@ -73,16 +73,24 @@ for end, row in enumerate(rows):
 chunk = rows[start:]
 m = header.match(chunk[0][0])
 items[m.group('class')] = chunk_to_items(chunk)
-print items['SPY']
 
 #Spelling hotfixes
-#items['SOLDIER']['Frying Pan'] = 
-#items['SPY']['Your Eternal Reward'] = 
-items['DEMOMAN']['Loch-n-Load'] = items['DEMOMAN'].pop('Loch-N-Load')
-items['DEMOMAN']['Claidheamohmor'] = items['DEMOMAN'].pop('Claidheamh Mor')
-items['PYRO']['Upgradeable TF_WEAPON_FLAMETHROWER'] = items['PYRO'].pop('Flamethrower')
-items['SCOUT']["Fan O'War"] = items['SCOUT'].pop("Fan O' War")
-items['MEDIC']["Upgradeable TF_WEAPON_SYRINGEGUN_MEDIC"] = items['MEDIC'].pop("Syringe Gun")
+hotfixes = [
+    ('SCOUT', "Fan O'War", "Fan O' War"),
+    ('SCOUT', 'Force-a-Nature', 'Force-A-Nature'),
+    ('SOLDIER', 'Upgradeable TF_WEAPON_SHOTGUN_PRIMARY', 'Shotgun'),
+    ('PYRO', 'Upgradeable TF_WEAPON_FLAMETHROWER', 'Flamethrower'),
+    ('DEMOMAN', 'Loch-n-Load', 'Loch-N-Load'),
+    ('DEMOMAN', 'Claidheamohmor', 'Claidheamh Mor'),
+    ('ENGINEER', 'Upgradeable TF_WEAPON_WRENCH', 'Wrench'),
+    ('MEDIC', 'Upgradeable TF_WEAPON_BONESAW', 'Bonesaw'),
+    ('MEDIC', 'Upgradeable TF_WEAPON_SYRINGEGUN_MEDIC', 'Syringe Gun'),
+    ('MEDIC', 'Upgradeable TF_WEAPON_MEDIGUN', 'Medi Gun'),
+    ('SNIPER', 'Upgradeable TF_WEAPON_SNIPERRIFLE', 'Sniper Rifle'),
+]
+
+for hotfix in hotfixes:
+    items[hotfix[0]][hotfix[1]] = items[hotfix[0]].pop(hotfix[2])
 
 API_KEY = raw_input('Steam Api Key : ')
 ciferkey = raw_input('Login Name (NOT alias)/Steam ID : ')
